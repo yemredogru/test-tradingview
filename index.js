@@ -12,7 +12,7 @@ app.get('/', (req, res) => {
   
   // POST method route
   app.post('/', (req, res) => {
-    console.log(req.body)
+    console.log(req)
     res.send('POST request to the homepage')
   })
 
