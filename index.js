@@ -7,10 +7,10 @@ const port = 3000
 app.use(express.json);
 app.use(express.urlencoded({extended:true}));
 app.get('/', (req, res) => {
-    res.send('merhaba');
+    res.end('merhaba');
   })
 app.post('/', (req, res) => {
-  res.send(req.body)
+  res.end(req.body)
 })
 
 app.listen(process.env.PORT || port, () => {
