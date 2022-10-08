@@ -4,14 +4,16 @@ const app=express();
 
 const port = 3000
 
-app.use(express.json);
 app.use(express.urlencoded({extended:true}));
+app.use(express.json());
 app.get('/', (req, res) => {
-    res.end('merhaba');
+    res.send('GET request to the homepage')
   })
-app.post('/', (req, res) => {
-  res.end(req.body)
-})
+  
+  // POST method route
+  app.post('/', (req, res) => {
+    res.send('POST request to the homepage')
+  })
 
 app.listen(process.env.PORT || port, () => {
   console.log(`Example app listening on port ${port}`)
